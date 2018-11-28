@@ -1,0 +1,8 @@
+services:
+    api_bundle.noop_inflector:
+        class: ApiBundle\Utils\NoopInflector
+    jms_serializer.camel_case_naming_strategy: # Disable camelCase => snake_case conversion
+        class: 'JMS\Serializer\Naming\IdenticalPropertyNamingStrategy'
+    jms_serializer.object_constructor: # Allow JMS to autobind doctrine entities
+        alias: jms_serializer.doctrine_object_constructor
+        public: false

@@ -1,0 +1,5 @@
+example:
+    type: rest
+    resource: ApiBundle\Controller\ExampleController
+    prefix: /example
+    name_prefix: api_example_ # use it to prevent naming collisions ;-)
