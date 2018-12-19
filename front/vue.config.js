@@ -4,6 +4,19 @@ const onProxyReq = (proxyReq) => {
   // Retire les headers pour accéder au app_dev.php
   proxyReq.removeHeader('x-forwarded-for')
 }
+const proxy =
+  process.env.DEV_API_URL
+    ? {
+      '/api': {
+        target: process.env.DEV_API_URL,
+        onProxyReq
+      },
+      '/logout': {
+        target: process.env.DEV_API_URL,
+        onProxyReq
+      }
+    }
+    : console.log('[PROXY] DISABLED - Configure ./.env and define DEV_API_URL')
 module.exports = {
   // pluginOptions: {
   //   quasar: {
@@ -19,19 +32,6 @@ module.exports = {
   configureWebpack,
   devServer: {
     host: '127.0.0.1',
-    ...(process.env.DEV_API_URL
-      ? {
-        proxy: {
-          '/api': {
-            target: process.env.DEV_API_URL,
-            onProxyReq
-          },
-          '/logout': {
-            target: process.env.DEV_API_URL,
-            onProxyReq
-          }
-        }
-      }
-      : console.log('[PROXY] DISABLED - Configure ./.env and define DEV_API_URL'))
+    proxy
   }
 }
