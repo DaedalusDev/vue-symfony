@@ -6,7 +6,7 @@
  * Time: 10:51
  */
 
-namespace ApiBundle\Utils;
+namespace App\ApiBundle\Utils;
 
 
 use FOS\RestBundle\Inflector\InflectorInterface;

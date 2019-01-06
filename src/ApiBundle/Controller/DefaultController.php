@@ -1,6 +1,6 @@
 <?php
 
-namespace ApiBundle\Controller;
+namespace App\ApiBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -9,7 +9,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
  * This controller server your frontend build with npm run build
  *
  * Class DefaultController
- * @package ApiBundle\Controller
+ * @package App\ApiBundle\Controller
  */
 class DefaultController extends Controller
 {

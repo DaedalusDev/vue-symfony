@@ -23,7 +23,7 @@ module.exports = {
   //     theme: 'mat'
   //   }
   // },
-  outputDir: '../web/build',
+  outputDir: '../public/build',
   baseUrl: process.env.NODE_ENV === 'production'
     ? './build/'
     : '/',

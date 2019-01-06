@@ -1,6 +1,6 @@
 <?php
 
-namespace ApiBundle\Entity;
+namespace App\ApiBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
@@ -9,7 +9,7 @@ use JMS\Serializer\Annotation as Serializer;
  * Example
  *
  * @ORM\Table(name="example")
- * @ORM\Entity(repositoryClass="ApiBundle\Repository\ExampleRepository")
+ * @ORM\Entity(repositoryClass="App\ApiBundle\Repository\ExampleRepository")
  */
 class Example
 {

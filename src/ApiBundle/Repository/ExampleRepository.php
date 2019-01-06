@@ -1,6 +1,6 @@
 <?php
 
-namespace ApiBundle\Repository;
+namespace App\ApiBundle\Repository;
 
 /**
  * ExampleRepository

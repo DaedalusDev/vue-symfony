@@ -1,0 +1,3 @@
+controllers:
+    resource: ../../src/ApiBundle/Controller/
+    type: annotation

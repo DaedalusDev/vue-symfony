@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+rest:
+    type: rest
+    resource: "@ApiBundle/Resources/config/routing.yml"
+    prefix: /api

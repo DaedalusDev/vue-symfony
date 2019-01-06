@@ -1,13 +1,13 @@
 <?php
 
-namespace ApiBundle\Controller;
+namespace App\ApiBundle\Controller;
 
-use ApiBundle\Entity\Example;
+use App\ApiBundle\Entity\Example;
+use FOS\RestBundle\Controller\AbstractFOSRestController;
 use FOS\RestBundle\Controller\Annotations as Rest;
-use FOS\RestBundle\Controller\FOSRestController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 
-class ExampleController extends FOSRestController
+class ExampleController extends AbstractFOSRestController
 {
     /**
      * This method is a simple parsing output example
@@ -34,7 +34,7 @@ class ExampleController extends FOSRestController
      * @Rest\View(serializerGroups={"getExample"})
      * @ParamConverter(
      *     "example",
-     *     class="ApiBundle\Entity\Example",
+     *     class="App\ApiBundle\Entity\Example",
      *     converter="fos_rest.request_body",
      *     options={
      *     "deserializationContext"={
