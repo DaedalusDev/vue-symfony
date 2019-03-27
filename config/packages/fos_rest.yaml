@@ -21,8 +21,3 @@ fos_rest:
         default_format: json
     service:
         inflector: api_bundle.noop_inflector
-    exception:
-        enabled: true
-        exception_controller: 'fos_rest.exception.controller:showAction'
-        messages:
-            'Symfony\Component\HttpKernel\Exception\HttpException': true

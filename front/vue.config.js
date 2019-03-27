@@ -17,6 +17,7 @@ const proxy =
       }
     }
     : console.log('[PROXY] DISABLED - Configure ./.env and define DEV_API_URL')
+
 module.exports = {
   // pluginOptions: {
   //   quasar: {
@@ -24,7 +25,7 @@ module.exports = {
   //   }
   // },
   outputDir: '../public/build',
-  baseUrl: process.env.NODE_ENV === 'production'
+  publicPath: process.env.NODE_ENV === 'production'
     ? './build/'
     : '/',
   lintOnSave: true,
